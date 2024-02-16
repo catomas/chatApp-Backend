@@ -16,7 +16,7 @@ app.use("/api/auth", userRoutes);
 app.use("/api/messages", messagesRoutes);
 
 moongoose
-  .connect(process.env.MONGO_TEST)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
   })
