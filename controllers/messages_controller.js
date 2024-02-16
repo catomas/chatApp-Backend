@@ -30,6 +30,7 @@ module.exports.getAllMessages = async (req, res, next) => {
       return {
         fromSelf: msg.sender.toString() === from.toString(),
         message: msg.message.text,
+        timestamp: msg.createdAt,
       };
     });
 
